@@ -10,12 +10,12 @@ odoo.define('web_db_exception_handler.exception_handler', function (require) {
         },
         display: function() {
             alert('Database Exception:\n' + this.error.data.message);
-            var Dialog = require('web.CrashManager');
+            /*var Dialog = require('web.CrashManager');
             return new Dialog.WarningDialog(this,Object.assign({}, options, {
                 "title",
             }),{
                 "message",
-            }).open();
+            }).open();*/
         }
     });
 
