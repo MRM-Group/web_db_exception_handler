@@ -3,19 +3,18 @@ odoo.define('web_db_exception_handler.exception_handler', function (require) {
     'use strict';
 
     var core = require('web.core');
+    var _t = core._t;
+    var WarningDialog = require('web.CrashManager').WarningDialog;
 
     var DBExceptionHandler = core.Class.extend({
         init: function(parent, error) {
             this.error = error;
         },
         display: function() {
-            alert('Database Exception:\n' + this.error.data.message);
-            /*var Dialog = require('web.CrashManager');
-            return new Dialog.WarningDialog(this,Object.assign({}, options, {
-                "title",
-            }),{
-                "message",
-            }).open();*/
+            this.error.message = this.error.data.message;
+            var dialog = new WarningDialog(this,{
+                title: _t("Odoo Error Database Exception"),
+            },this.error).open();
         }
     });
 
