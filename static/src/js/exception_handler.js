@@ -9,7 +9,7 @@ odoo.define('web_db_exception_handler.exception_handler', function (require) {
             this.error = error;
         },
         display: function() {
-            alert('Damien est trop fort!');
+            alert('Database Exception:\n' + error.data.message);
         }
     });
 
