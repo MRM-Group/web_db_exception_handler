@@ -3,7 +3,7 @@
     'name': 'PostgreSQL exception handler',
     'version': '1.0',
     'depends': ['web'],
-    'author': 'Pafnow',
+    'author': 'MRM, Pafnow',
     'category': 'Technical Settings',
     'description': 'Odoo client exception handler for PostgreSQL database exception raised by triggers',
     'data': [
